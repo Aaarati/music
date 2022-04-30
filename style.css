@@ -1,0 +1,851 @@
+/*@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@400;600;700&display=swap");*/
+
+/*css variables*/
+:root {
+  --normal: 400;
+  --semibold: 600;
+  --bold: 700;
+  --font_lora: "Lora", serif;
+  --font_lato: "Lato", sans-serif;
+  --clr_brown: #4f2907;
+  --clr_brown_light: #904a0a;
+  --clr_black: #000;
+  --clr_white: #fff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.container {
+  min-height: 100%;
+  width: 100%;
+}
+/*navbar css*/
+.container nav {
+  min-height: 6rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: var(--bold);
+  font-family: var(--font_lora);
+  position: relative;
+}
+.container nav h2 {
+  width: 30%;
+  font-size: 2rem;
+  color: var(--clr_brown_light);
+  letter-spacing: 0.025rem;
+  text-align: center;
+}
+.container nav ul {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+}
+
+.container nav ul li a {
+  text-decoration: none;
+  color: var(--clr_black);
+  font-size: 1.125rem;
+  font-weight: var(--normal);
+  padding: 0 1.125rem;
+  transition: all 0.3s;
+}
+
+.container nav ul li a:hover {
+  cursor: pointer;
+  color: var(--clr_brown_light);
+}
+
+.container nav img {
+  height: 1.25rem;
+  width: 2rem;
+  display: none;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  cursor: pointer;
+}
+
+.container nav button {
+  max-width: 20%;
+  height: 40px;
+  width: 120px;
+  border: none;
+  outline: none;
+  background-color: var(--clr_brown_light);
+  text-transform: capitalize;
+  font-weight: var(--semibold);
+  font-size: 1rem;
+  font-family: var(--font_lora);
+  color: #fff;
+  margin-right: 3rem;
+  transition: 0.4s;
+}
+
+.container nav button:hover {
+  cursor: pointer;
+  background-color: var(--clr_brown);
+}
+/*banner css*/
+.container .banner {
+  height: 90vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.container .banner img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  mix-blend-mode: overlay;
+}
+
+.container .banner .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  height: 100%;
+  width: 50%;
+  margin-left: 7.25rem;
+  font-family: var(--font_lora);
+}
+.container .banner .content h2 {
+  font-size: 4rem;
+  font-weight: var(--normal);
+  color: var(--clr_white);
+}
+.container .banner .content h3 {
+  font-size: 1.25rem;
+  font-weight: var(--normal);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: var(--clr_white);
+
+  margin-bottom: 2rem;
+}
+.container .banner .content p {
+  text-transform: capitalize;
+  font-size: 1.125rem;
+  color: var(--clr_white);
+  width: 60%;
+  line-height: 30px;
+  margin-bottom: 2rem;
+}
+
+.container .banner .content a {
+  max-width: 200px;
+  text-decoration: none;
+  font-size: 1.125rem;
+  background-color: var(--clr_brown_light);
+  color: var(--clr_white);
+  font-weight: var(--semibold);
+  text-transform: capitalize;
+  padding: 1rem;
+  text-align: center;
+  transition: 0.4s;
+}
+.container .banner .content a:hover {
+  cursor: pointer;
+  background-color: var(--clr_brown);
+}
+
+main {
+  margin: 0 7.5rem;
+}
+/*about us css*/
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  margin: 5rem 0;
+  font-family: var(--font_lora);
+}
+
+.about .about_us {
+  max-width: 80%;
+}
+.about .about_us h2 {
+  text-transform: capitalize;
+  font-size: 2.25rem;
+  font-weight: var(--semibold);
+  padding: 1.125rem 0;
+  position: relative;
+}
+
+.about .about_us h2::after {
+  content: "";
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  height: 3px;
+  width: 60px;
+  background-color: var(--clr_brown_light);
+}
+
+.about .about_us p {
+  font-size: 1.125rem;
+  font-weight: var(--normal);
+  line-height: 30px;
+  margin-bottom: 2rem;
+}
+
+.about .about_us a {
+  max-width: 200px;
+  text-decoration: none;
+  font-size: 1.125rem;
+  background-color: var(--clr_brown_light);
+  color: var(--clr_white);
+  font-weight: var(--semibold);
+  text-transform: capitalize;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  transition: 0.4s;
+}
+.about .about_us a:hover {
+  cursor: pointer;
+  background-color: var(--clr_brown);
+}
+.about .about_image {
+  width: 100%;
+  height: 30rem;
+}
+
+.about .about_image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/*classes css*/
+.music_class {
+  font-family: var(--font_lora);
+  margin: 5rem 0;
+}
+
+.music_class h2.heading {
+  text-transform: capitalize;
+  font-size: 2.25rem;
+  font-weight: var(--semibold);
+  padding: 1.125rem 0;
+  position: relative;
+}
+
+.music_class h2.heading::after {
+  content: "";
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  height: 3px;
+  width: 60px;
+  background-color: var(--clr_brown_light);
+}
+
+.music_class .music_cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  gap: 2.25rem 1rem;
+  margin: 2rem 0;
+}
+
+.music_class .music_cards .class_info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 15rem;
+  width: 100%;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4);
+}
+.music_class .music_cards .class_info .images {
+  height: 15em;
+  width: 100%;
+}
+.music_class .music_cards .class_info .images img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.music_class .music_cards .class_info .class_details {
+  padding: 1.125rem 1.25rem;
+  text-transform: capitalize;
+}
+.music_class .music_cards .class_info .class_details h2 {
+  font-size: 2rem;
+  font-weight: var(--normal);
+  margin-bottom: 1rem;
+}
+.music_class .music_cards .class_info .class_details p {
+  font-size: 1.125rem;
+  font-weight: var(--normal);
+  margin-bottom: 2rem;
+}
+.music_class .music_cards .class_info .class_details a {
+  max-width: 200px;
+  text-decoration: none;
+  font-size: 1.125rem;
+  background-color: var(--clr_brown_light);
+  color: var(--clr_white);
+  font-weight: var(--semibold);
+  text-transform: capitalize;
+  padding: 0.55rem 1rem;
+  text-align: center;
+  transition: 0.4s;
+}
+.music_class .music_cards .class_info .class_details a:hover {
+  cursor: pointer;
+  background-color: var(--clr_brown);
+}
+
+/*contact form css*/
+.contact {
+  font-family: var(--font_lora);
+  margin-top: 5rem;
+}
+
+.contact h2 {
+  text-transform: capitalize;
+  font-size: 2.25rem;
+  font-weight: var(--semibold);
+  padding: 1.125rem 0;
+  position: relative;
+}
+
+.contact h2:after {
+  content: "";
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  height: 3px;
+  width: 60px;
+  background-color: var(--clr_brown_light);
+}
+.contact p {
+  font-size: 1.125rem;
+  font-weight: var(--normal);
+  margin-bottom: 2rem;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+
+.contact .form_details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 3rem;
+}
+
+.contact form label {
+  font-size: 1.125rem;
+  font-weight: var(--normal);
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+
+.contact form input[type="text"],
+.contact form input[type="email"] {
+  height: 2.25rem;
+  width: 80%;
+  margin-bottom: 1rem;
+  padding-left: 0.25rem;
+  font-family: var(--font_lora);
+  font-weight: var(--normal);
+  resize: vertical;
+}
+
+.contact form textarea {
+  height: 5rem;
+  width: 80%;
+  margin-bottom: 1rem;
+  padding-left: 0.25rem;
+  font-weight: var(--normal);
+  resize: vertical;
+}
+
+.contact form input[type="submit"] {
+  height: 40px;
+  width: 150px;
+  border: none;
+  outline: none;
+  background-color: var(--clr_brown_light);
+  text-transform: capitalize;
+  font-weight: var(--normabold);
+  font-size: 1rem;
+  font-family: var(--font_lora);
+  color: #fff;
+  transition: 0.4s;
+}
+.contact form input[type="submit"]:hover {
+  cursor: pointer;
+  background-color: var(--clr_brown);
+}
+
+/*get in touch css*/
+.contact .form_details .infos .phone,
+.contact .form_details .infos .email,
+.contact .form_details .infos .location {
+  display: grid;
+  grid-template-columns: 0.35fr 1fr;
+  max-width: 20rem;
+  gap: 0 1rem;
+  align-items: center;
+  background-color: var(--clr_brown_light);
+  padding: 0.75rem;
+  color: var(--clr_white);
+}
+
+.contact .form_details .infos h3 {
+  font-size: 1.125rem;
+  font-weight: var(--normal);
+}
+
+.contact .form_details .infos img {
+  height: 2.75rem;
+  width: 2.75em;
+  object-fit: cover;
+}
+
+/*footer css*/
+footer {
+  display: grid;
+  place-items: center;
+  height: 4rem;
+  width: 100%;
+  text-align: center;
+  background-color: var(--clr_brown_light);
+  font-size: 1.125rem;
+  color: var(--clr_white);
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+
+/*login css*/
+.container .login_detail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 0;
+  width: 100%;
+  z-index: 500;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.container .login_detail img {
+  height: 2rem;
+  width: 2rem;
+  position: absolute;
+  top: 1.25rem;
+  right: 2rem;
+  cursor: pointer;
+}
+.container .login_detail form {
+  font-family: var(--font_lato);
+  font-weight: var(--semibold);
+  background-color: var(--clr_white);
+  height: 25rem;
+  width: 20rem;
+  padding: 3rem 1.25rem;
+  border-radius: 10px;
+  position: relative;
+}
+.container .login_detail form h2 {
+  text-transform: capitalize;
+  font-size: 1.25rem;
+  font-weight: var(--normal);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.container .login_detail form label {
+  font-size: 1rem;
+  font-weight: var(--normal);
+  text-transform: capitalize;
+}
+.container .login_detail form input[type="text"],
+.container .login_detail form input[type="password"] {
+  height: 2.25rem;
+  width: 100%;
+  margin: 0.25rem 0 1rem 0;
+  padding-left: 0.25rem;
+  font-family: var(--font_lora);
+  font-weight: var(--normal);
+}
+
+.container .login_detail form input[type="submit"] {
+  height: 40px;
+  width: 150px;
+  border: none;
+  outline: none;
+  background-color: var(--clr_brown);
+  text-transform: capitalize;
+  font-weight: var(--semibold);
+  font-size: 1rem;
+  font-family: var(--font_lato);
+  color: #fff;
+  transition: 0.4s;
+}
+.container .login_detail form input[type="submit"]:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.container .login_detail form p {
+  margin-top: 1rem;
+}
+
+/*sign in css*/
+.container .sign_detail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 0;
+  width: 100%;
+  z-index: 500;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.container .sign_detail img {
+  height: 2rem;
+  width: 2rem;
+  position: absolute;
+  top: 1.25rem;
+  right: 2rem;
+  cursor: pointer;
+}
+.container .sign_detail form {
+  font-family: var(--font_lato);
+  font-weight: var(--semibold);
+  background-color: var(--clr_white);
+  height: 25rem;
+  width: 20rem;
+  padding: 3rem 1.25rem;
+  border-radius: 10px;
+  position: relative;
+}
+.container .sign_detail form h2 {
+  text-transform: capitalize;
+  font-size: 1.25rem;
+  font-weight: var(--normal);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.container .sign_detail form label {
+  font-size: 1rem;
+  font-weight: var(--normal);
+  text-transform: capitalize;
+}
+.container .sign_detail form input[type="text"],
+.container .sign_detail form input[type="password"] {
+  height: 2.25rem;
+  width: 100%;
+  margin: 0.25rem 0 1rem 0;
+  padding-left: 0.25rem;
+  font-family: var(--font_lora);
+  font-weight: var(--normal);
+}
+
+.container .sign_detail form input[type="submit"] {
+  height: 40px;
+  width: 150px;
+  border: none;
+  outline: none;
+  background-color: var(--clr_brown);
+  text-transform: capitalize;
+  font-weight: var(--semibold);
+  font-size: 1rem;
+  font-family: var(--font_lato);
+  color: #fff;
+  transition: 0.4s;
+}
+.container .sign_detail form input[type="submit"]:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.container .sign_detail form p {
+  margin-top: 1rem;
+}
+
+/*course enroll css*/
+.container .course_detail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 0;
+  width: 100%;
+  z-index: 500;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.container .course_detail img {
+  height: 2rem;
+  width: 2rem;
+  position: absolute;
+  top: 1.25rem;
+  right: 2rem;
+  cursor: pointer;
+}
+.container .course_detail form {
+  font-family: var(--font_lato);
+  font-weight: var(--semibold);
+  background-color: var(--clr_white);
+  height: 40rem;
+  width: 30rem;
+  padding: 3rem 1.25rem;
+  border-radius: 10px;
+  position: relative;
+  margin: 0 3rem;
+}
+.container .course_detail form h2 {
+  text-transform: capitalize;
+  font-size: 1.25rem;
+  font-weight: var(--normal);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.container .course_detail form label {
+  font-size: 1rem;
+  font-weight: var(--normal);
+  text-transform: capitalize;
+}
+.container .course_detail form input[type="text"],
+.container .course_detail form input[type="password"],
+.container .course_detail form input[type="email"],
+.container .course_detail form input[type="number"] {
+  height: 2.25rem;
+  width: 100%;
+  margin: 0.25rem 0 1rem 0;
+  padding-left: 0.25rem;
+  font-family: var(--font_lora);
+  font-weight: var(--normal);
+}
+.container .course_detail form select {
+  height: 2.25rem;
+  width: 100%;
+  margin: 0.25rem 0 1rem 0;
+  padding-left: 0.25rem;
+  font-family: var(--font_lora);
+  font-weight: var(--normal);
+}
+.container .course_detail form input[type="radio"] {
+  margin: 0.25rem 0.75rem 1rem 0.5rem;
+  padding-left: 0.25rem;
+  font-family: var(--font_lora);
+  font-weight: var(--normal);
+}
+
+.container .course_detail form input[type="submit"] {
+  height: 40px;
+  width: 150px;
+  border: none;
+  outline: none;
+  background-color: var(--clr_brown);
+  text-transform: capitalize;
+  font-weight: var(--semibold);
+  font-size: 1rem;
+  font-family: var(--font_lato);
+  color: #fff;
+  transition: 0.4s;
+}
+.container .course_detail form input[type="submit"]:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+/*media queries*/
+@media (max-width: 59rem) {
+  .music_class .music_cards .class_info {
+    grid-template-columns: 1fr;
+    height: 30rem;
+    width: 100%;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+  }
+  .music_class .music_cards .class_info .class_details {
+    padding: 1.25rem;
+  }
+  .music_class .music_cards .class_info .class_details h2,
+  .music_class .music_cards .class_info .class_details a {
+    margin-bottom: 0.25rem;
+  }
+}
+
+@media (max-width: 47rem) {
+  .container nav {
+    height: 4rem;
+  }
+  .container nav ul {
+    display: block;
+    text-align: center;
+    flex-direction: column;
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    width: 100%;
+    transform: translateX(-100%);
+    height: auto;
+    background-color: var(--clr_white);
+    z-index: 150;
+    padding: 1rem 3rem;
+    transition: 0.5s;
+  }
+
+  .container nav ul li a {
+    margin-bottom: 0.25rem;
+    padding: 0;
+  }
+  .container nav img#menuopen {
+    display: block;
+  }
+  .container nav img#closemenu {
+    display: none;
+  }
+
+  .container nav h2 {
+    text-align: left;
+    width: 50%;
+  }
+
+  .container .banner .content h2 {
+    font-size: 2rem;
+  }
+
+  .container .banner .content h3 {
+    font-size: 1.125rem;
+  }
+
+  .container .banner .content p {
+    width: 80%;
+  }
+
+  .container .banner .content {
+    margin-left: 3rem;
+    width: 80%;
+  }
+  .container nav button {
+    height: 30px;
+    width: 90px;
+    font-weight: var(--normal);
+    margin-right: 0;
+  }
+
+  main {
+    margin: 0 3rem;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+  }
+
+  .about .about_us {
+    max-width: 100%;
+  }
+
+  .contact .form_details {
+    grid-template-columns: 1fr;
+  }
+  .contact .form_details .infos {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 38rem) {
+  .container nav {
+    min-height: 5rem;
+    /* justify-content: center; */
+  }
+  .container nav h2 {
+    font-size: 1.125rem;
+  }
+
+  .container .banner .content {
+    margin-left: 2rem;
+  }
+  .container .banner .content h2 {
+    font-size: 2rem;
+  }
+
+  .container .banner .content h3 {
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  .container .banner .content p {
+    font-size: 1rem;
+    width: 100%;
+  }
+  .container .banner .content {
+    margin: 0 2rem;
+  }
+  .container .banner .content a {
+    font-size: 1rem;
+    max-width: 150px;
+    padding: 0.75rem;
+    font-weight: var(--normal);
+  }
+  main {
+    margin: 0 2rem;
+  }
+  .about,
+  .music_class,
+  .contact {
+    margin: 2rem 0;
+  }
+  .about .about_us h2,
+  .contact h2,
+  .music_class h2.heading {
+    font-size: 1.25rem;
+  }
+  .about .about_us h2::after,
+  .contact h2:after,
+  .music_class h2.heading::after {
+    top: 2.75rem;
+    width: 50px;
+  }
+  .about .about_us p {
+    font-size: 1rem;
+    line-height: 25px;
+  }
+  .about .about_us a {
+    max-width: 100px;
+  }
+  .music_class .music_cards {
+    grid-template-columns: 1fr;
+    margin: 1rem 0;
+  }
+  .music_class .music_cards .class_info .class_details h2 {
+    font-size: 1.25rem;
+  }
+  .contact .form_details .infos img {
+    height: 2rem;
+    width: 2rem;
+  }
+  footer {
+    font-size: 1rem;
+  }
+}
